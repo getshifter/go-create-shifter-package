@@ -26,6 +26,7 @@ _testmain.go
 *.prof
 
 ## ADD manually
+build/
 webroot/
 *.sql
 *.zip
