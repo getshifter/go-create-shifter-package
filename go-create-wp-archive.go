@@ -40,7 +40,7 @@ var checkpath []string
 
 func main () {
 	dir := filepath.Dir(os.Args[0])
-	fmt.Println(dir)
+	log.Println("Working in " + dir)
 	os.Chdir(dir)
 
 	checkStructure()
