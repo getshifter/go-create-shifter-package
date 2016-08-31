@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"log"
 	"github.com/jhoonb/archivex"
+	"log"
+	"os"
 	"path/filepath"
 )
 
-func showUsageAndExit ()  {
+func showUsageAndExit() {
 	var stdin string
 	usage := `Showing Help message...
 
@@ -16,7 +16,7 @@ func showUsageAndExit ()  {
 
 =============================================
 ./
-├── go-create-wp-archive[.exe]
+├── go-create-shifter-package[.exe]
 ├── webroot/
 │   ├── wp-admin/
 │   ├── wp-content/
@@ -38,7 +38,7 @@ func showUsageAndExit ()  {
 var fpaths []string
 var checkpath []string
 
-func main () {
+func main() {
 	dir := filepath.Dir(os.Args[0])
 	log.Println("Working in " + dir)
 	os.Chdir(dir)
@@ -52,7 +52,7 @@ func Exists(name string) bool {
 	return !os.IsNotExist(err)
 }
 
-func checkStructure(){
+func checkStructure() {
 	checkpath = append(checkpath, "wp.sql")
 	checkpath = append(checkpath, "webroot/index.php")
 	checkpath = append(checkpath, "webroot/wp-admin/admin.php")
@@ -81,4 +81,3 @@ func createArchive() {
 	zip.AddAll("webroot", true)
 	zip.Close()
 }
-
