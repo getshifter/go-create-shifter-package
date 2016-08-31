@@ -1,4 +1,4 @@
-# go-create-wp-archive for xxx
+# go-create-shifter-package for Shifter
 
 
 
@@ -6,7 +6,7 @@
 
 ```
 mkdir build
-gox -os="darwin windows" -output "build/{{.Dir}}_{{.OS}}_{{.Arch}}"
+gox -os="darwin windows" -output "build/create-shifter-package_{{.OS}}_{{.Arch}}"
 ```
 
 ## Release
