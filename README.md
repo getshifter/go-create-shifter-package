@@ -6,11 +6,11 @@
 
 ```
 mkdir build
-gox -os="darwin windows" -output "build/create-shifter-package_{{.OS}}_{{.Arch}}"
+gox -os="darwin windows" -arch="386 amd64" -output "build/create-shifter-package_{{.OS}}_{{.Arch}}"
 ```
 
 ## Release
 
 ```
-ghr --replace -u megumiteam v0.1.0 build/
+ghr --replace -u megumiteam v0.1.1 build/
 ```
