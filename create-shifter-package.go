@@ -55,10 +55,10 @@ func Exists(name string) bool {
 
 func checkStructure() {
 	checkpath = append(checkpath, "wp.sql")
-	checkpath = append(checkpath, "webroot/index.php")
-	checkpath = append(checkpath, "webroot/wp-admin/admin.php")
-	checkpath = append(checkpath, "webroot/wp-content/index.php")
-	checkpath = append(checkpath, "webroot/wp-config.php")
+	checkpath = append(checkpath, filepath.Join("webroot", "index.php"))
+	checkpath = append(checkpath, filepath.Join("webroot", "wp-admin", "admin.php"))
+	checkpath = append(checkpath, filepath.Join("webroot", "wp-content", "index.php"))
+	checkpath = append(checkpath, filepath.Join("webroot", "wp-config.php"))
 
 	for _, fpath := range checkpath {
 		if Exists(fpath) {
