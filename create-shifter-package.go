@@ -47,6 +47,7 @@ func main() {
 	createArchive()
 }
 
+// Exists checks file existence
 func Exists(name string) bool {
 	_, err := os.Stat(name)
 	return !os.IsNotExist(err)
@@ -70,13 +71,13 @@ func checkStructure() {
 }
 
 func createArchive() {
-	arcive_name := "wordpress.zip"
+	arciveName := "wordpress.zip"
 	zip := new(archivex.ZipFile)
-	if Exists(arcive_name) {
-		os.Remove(arcive_name)
+	if Exists(arciveName) {
+		os.Remove(arciveName)
 	}
 
-	zip.Create(arcive_name)
+	zip.Create(arciveName)
 	zip.AddFile("wp.sql")
 	zip.AddAll("webroot", true)
 	zip.Close()
