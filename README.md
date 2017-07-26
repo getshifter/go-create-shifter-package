@@ -30,12 +30,13 @@ Build for multi os(macox, linux, windows).
 
 ```
 $ mkdir build
-$ github.com/mitchellh/gox
-$ gox -os="darwin windows" -arch="386 amd64" -output "build/create-shifter-package_{{.OS}}_{{.Arch}}"
+$ go get github.com/mitchellh/gox
+$ gox -os="linux darwin windows" -arch="386 amd64" -output "build/create-shifter-package_{{.OS}}_{{.Arch}}"
 ```
 
 upload releases to github. (for maintaner information)
 
 ```
-$ ghr --replace -u megumiteam v0.1.1 build/
+$ go get github.com/tcnksm/ghr
+$ ghr --replace -u getshifter v0.1.1 build/
 ```
