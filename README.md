@@ -6,6 +6,9 @@ Get binary from here.
 
 - https://github.com/getshifter/go-create-shifter-package/releases
 
+## How to use
+
+https://support.getshifter.io/user-guide/how-to-import-your-wordpress-site-into-shifter
 
 ## Development
 
