@@ -1,5 +1,7 @@
 # go-create-shifter-package for Shifter
 
+> This tool is no longer usable with the termination of Shifter Project V1(2018.03).
+
 ## Download 
 
 Get binary from here.
